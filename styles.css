@@ -1,0 +1,29 @@
+.quick-view {
+	background-color: blue;
+	width: 100%;
+	color: white;
+	height: 50px;
+	z-index: 1;
+	position: absolute;
+  top: calc(100% - 50px);
+  left: 0%;
+}
+
+.margin-fix {
+	margin-bottom: -50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.custom-modal {
+	max-width: 80% !important;
+	align-items: center !important;
+	z-index: 99 !important;
+}
+
+.custom-stage {
+	display: flex;
+	flex-direction: row;
+	align-items: center !important;
+}
