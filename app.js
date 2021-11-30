@@ -7,7 +7,6 @@ function main() {
     "<button rel='modal:open' class='quick-view'></button>"
   ).text("Quick View");
 
-
   $("head").append(
     $(`
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
@@ -54,7 +53,14 @@ function main() {
 
       const owl = $(".owl-carousel.owl-theme");
 
-      owl.owlCarousel({ dots: false, margin: 15, loop: true, center: true, stagePadding: 10, lazyLoad: true});
+      owl.owlCarousel({
+        dots: false,
+        margin: 15,
+        loop: true,
+        center: true,
+        stagePadding: 10,
+        lazyLoad: true,
+      });
 
       $(".owl-next").click(function () {
         owl.trigger("next.owl.carousel");
@@ -71,7 +77,7 @@ function main() {
     while (!currentTarget.is(productsSection)) {
       if (currentTarget.hasClass("product-card")) {
         currentTarget.append(quickViewButton);
-      	quickViewButton.show()
+        quickViewButton.show();
         currentTarget?.addClass("margin-fix");
         previousTarget?.removeClass("margin-fix");
         previousTarget = currentTarget;
@@ -79,8 +85,8 @@ function main() {
       }
       currentTarget = currentTarget.parent();
     }
-    if(currentTarget.is(productsSection)){
-			quickViewButton.hide()
+    if (currentTarget.is(productsSection)) {
+      quickViewButton.hide();
     }
   }
 
